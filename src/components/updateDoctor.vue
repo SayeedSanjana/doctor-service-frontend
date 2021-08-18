@@ -2,7 +2,7 @@
     <div style="padding-top:50px">
     <!--<button @click="getDoctor('6119e3b03b81cd1b88ca94d4')">Doctor's Profile</button>-->
     <!--<div v-for="doctor in doctors" :key="doctor._id">-->
-       <form @submit.prevent="updateDoctor('6119e3b03b81cd1b88ca94d4')">
+       <form @submit.prevent="updateDoctor(this.$route.params.id)">
         <div>
           <label for="duuid">DUUID</label>
           <input type="text" id="duuid" v-model="formdata.duuid"  readonly>
@@ -56,7 +56,7 @@ import axios from 'axios'
 export default {
   name: 'updateDoctor',
   created(){
-      this.getDoctor("6119e3b03b81cd1b88ca94d4")
+      this.getDoctor(this.$route.params.id)
   },
   data(){
       return{

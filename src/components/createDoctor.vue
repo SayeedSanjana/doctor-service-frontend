@@ -12,14 +12,14 @@
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="duuid">
         Duuid
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="duuid" type="text" placeholder="D123123123" v-model="formdata.duuid" >
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="duuid" type="text" placeholder="D123123123" v-model="formdata.duuid" >
       <!--<p class="text-red-500 text-xs italic">Please fill out this field.</p>-->
     </div>
     <div class="w-full md:w-1/2 px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="nid">
         nid
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="nid" type="text" placeholder="11111111111" v-model="formdata.nid" >
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="nid" type="text" placeholder="11111111111" v-model="formdata.nid" >
       <!--<p class="text-red-500 text-xs italic">Please fill out this field.</p>-->
     </div>
     </div>
