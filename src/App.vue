@@ -17,6 +17,7 @@
 </template>
 
 <script>
+
 //import getDoctor from './components/getDoctor.vue'
 // import createDoctor from './components/createDoctor.vue'
 // import updateDoctor from './components/updateDoctor.vue'
@@ -28,6 +29,7 @@
 export default {
   name: 'App',
   components: {
+    
     //getDoctor,
     // createDoctor,
     // updateDoctor,

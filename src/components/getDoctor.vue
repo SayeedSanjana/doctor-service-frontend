@@ -2,7 +2,7 @@
 
 <section class="text-gray-600 body-font" >
   <div  class="container px-5 py-24 mx-auto">
-    <div class=" -m-4 grid grid-cols-3 " >
+    <div class=" -m-4 md:grid md:grid-cols-3 " >
       <div class="p-4 "  v-for="doctor in doctors" :key="doctor._id" >
         <div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
           <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{{doctor.nationality}}</h2>
@@ -24,7 +24,7 @@
             <button class="bg-transparent text-center hover:bg-blue-200  text-blue-700 font-semibold hover:text-white p-1 border border-blue-400 hover:border-transparent rounded">
             <span class="text-gray-400 inline-flex items-center leading-none text-sm text-blue-500">
               <svg class="w-4 h-4 mr-1 fill-current text-blue-500"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" ><g><path xmlns="http://www.w3.org/2000/svg" d="M200,24a24,24,0,1,1-24,24A24,24,0,0,1,200,24ZM32,192a24,24,0,1,0,24-24A24,24,0,0,0,32,192Zm53-91a24,24,0,1,0,24-24A24,24,0,0,0,85,101Zm354.039,7.273A237.668,237.668,0,0,0,315.461,24.881a24,24,0,1,0-12.883,46.238,189.368,189.368,0,0,1,98.448,66.463A185.963,185.963,0,0,1,440,252.116C440,355.716,355.629,440,251.922,440a186.451,186.451,0,0,1-114.189-38.577,188.962,188.962,0,0,1-36.191-36.548L88,361.865v59.956a236.16,236.16,0,0,0,330.847-2.9,235.762,235.762,0,0,0,20.192-310.646ZM72,456V341.919l114.794,25.51a24,24,0,1,0,10.412-46.858l-144-32A24,24,0,0,0,24,312V456a24,24,0,0,0,48,0Z" fill="" data-original="#000000" style=""/></g>
-              </svg>Edit
+              </svg><router-link :to="'/update-doctor/'+doctor._id">Edit</router-link>
             </span>
             </button>
             </div>

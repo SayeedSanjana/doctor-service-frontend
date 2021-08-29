@@ -1,6 +1,9 @@
 <template>
 
- <div >
+ <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+  <div class="tracking-widest text-lg title-font font-bold text-gray-600  border-b border-gray-300 ">
+    Account Settings
+  </div>
 <div class="flex items-center justify-center p-6 mx-3 my-4  ">
   <form @submit.prevent="createDoctor" class="w-full max-w-lg " >
     <div class="mx-4 py-4 p-2">
@@ -54,9 +57,14 @@
     </div>
     <div class="w-full md:w-1/3 px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="dob">
-        Dob
+        Date Of Birth
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="dob" type="text" placeholder="1990-09-08" v-model="formdata.dob">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="dob" type="date" placeholder="1990-09-08"  v-model="formdata.dob"> 
+      <!-- <date-pick
+        v-model="formdata.dob"
+        :format="'YYYY.MM.DD'"
+    ></date-pick>  -->
+     <!-- <datepicker id="dob" type="date"  v-model="formdata.dob" format="YYYY-MM-dd"></datepicker>  -->
     </div>
     <div class="w-full md:w-1/3 px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="gender">
@@ -194,18 +202,13 @@
           <input type="text" id="institution" v-model="edu.institution">
         </div> -->
     <div class="mt-8 py-3 px-3 flex justify-end">
-      <button @click="queueEducation" class="  bg-purple-500 hover:bg-purple-400  text-white font-bold py-2 px-4 rounded" >
+      <button class="  bg-purple-500 hover:bg-purple-400  text-white font-bold py-2 px-4 rounded" >
       Create Profile
     </button>
     </div>
 </form>
 </div>
-</div>
-
- 
-
-
-
+</section>
 </template>
 
 
@@ -318,6 +321,9 @@
 
 <script>
 import axios from 'axios'
+//import moment from 'moment'
+//import Datepicker from 'vuejs-datepicker';
+//import DatePick from 'vue-date-pick';
 export default {
   
   name: 'createDoctor',
@@ -359,6 +365,10 @@ export default {
         //education:[]
       }
     }
+  },
+  components:{
+     //Datepicker
+     //DatePick
   },
   methods:{
     addEducation(id){
